@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Map-->
         <scene sceneID="AcI-73-2cB">
             <objects>
-                <viewController id="bFB-Bo-JM4" sceneMemberID="viewController">
+                <viewController id="bFB-Bo-JM4" customClass="MapViewController" customModule="TabBarControllerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jZ7-xm-PPN"/>
                         <viewControllerLayoutGuide type="bottom" id="AnT-kS-wk3"/>
@@ -19,18 +19,30 @@
                     <view key="view" contentMode="scaleToFill" id="aVg-bH-9UW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHp-Kw-glK">
+                                <rect key="frame" x="112" y="323" width="151" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kHp-Kw-glK" firstAttribute="centerY" secondItem="aVg-bH-9UW" secondAttribute="centerY" id="fZy-hx-Ms1"/>
+                            <constraint firstItem="kHp-Kw-glK" firstAttribute="centerX" secondItem="aVg-bH-9UW" secondAttribute="centerX" id="vAU-a1-kQP"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="o72-Lq-MwN"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="o72-Lq-MwN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utr-WJ-PuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="41" y="-34"/>
         </scene>
-        <!--Item 1-->
+        <!--List-->
         <scene sceneID="dSn-sw-v7V">
             <objects>
-                <viewController id="ohe-aP-SZg" sceneMemberID="viewController">
+                <viewController id="ohe-aP-SZg" customClass="ListViewController" customModule="TabBarControllerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hTj-VY-rvY"/>
                         <viewControllerLayoutGuide type="bottom" id="cRd-9O-SM7"/>
@@ -38,9 +50,21 @@
                     <view key="view" contentMode="scaleToFill" id="mli-ED-oNy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0p-UA-pwI">
+                                <rect key="frame" x="115" y="323" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k0p-UA-pwI" firstAttribute="centerX" secondItem="mli-ED-oNy" secondAttribute="centerX" id="ebv-nA-WsN"/>
+                            <constraint firstItem="k0p-UA-pwI" firstAttribute="centerY" secondItem="mli-ED-oNy" secondAttribute="centerY" id="nvm-na-Nre"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="6sP-cc-k3K"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="6sP-cc-k3K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4M5-ys-N8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,4 +89,8 @@
             <point key="canvasLocation" x="-911" y="-361"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list" width="30" height="30"/>
+        <image name="map" width="30" height="30"/>
+    </resources>
 </document>
