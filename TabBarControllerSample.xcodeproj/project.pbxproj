@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D4293D1D1E344C80004D1F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4293D1C1E344C80004D1F21 /* AppDelegate.swift */; };
-		D4293D1F1E344C80004D1F21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4293D1E1E344C80004D1F21 /* ViewController.swift */; };
 		D4293D221E344C80004D1F21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4293D201E344C80004D1F21 /* Main.storyboard */; };
 		D4293D241E344C80004D1F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4293D231E344C80004D1F21 /* Assets.xcassets */; };
 		D4293D271E344C80004D1F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4293D251E344C80004D1F21 /* LaunchScreen.storyboard */; };
@@ -16,9 +15,12 @@
 		D4293D3D1E344C81004D1F21 /* TabBarControllerSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4293D3C1E344C81004D1F21 /* TabBarControllerSampleUITests.swift */; };
 		D4293D4F1E34D26E004D1F21 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4293D4E1E34D26E004D1F21 /* CustomTabbarController.swift */; };
 		D4293D511E34D277004D1F21 /* CustomTabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4293D501E34D277004D1F21 /* CustomTabbarItem.swift */; };
-		D499555F1E34EBF500B9501A /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = D499555E1E34EBF500B9501A /* add.png */; };
 		D49955611E34F1E200B9501A /* add_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = D49955601E34F1E200B9501A /* add_circle.png */; };
 		D49955631E34F2AB00B9501A /* add_circle_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D49955621E34F2AB00B9501A /* add_circle_selected.png */; };
+		D49955661E34FDDE00B9501A /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = D49955641E34FDDE00B9501A /* list.png */; };
+		D49955671E34FDDE00B9501A /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = D49955651E34FDDE00B9501A /* map.png */; };
+		D4C6C7F51E351C870033800E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6C7F41E351C870033800E /* ListViewController.swift */; };
+		D4C6C7F71E351C920033800E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6C7F61E351C910033800E /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,6 @@
 /* Begin PBXFileReference section */
 		D4293D191E344C80004D1F21 /* TabBarControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4293D1C1E344C80004D1F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4293D1E1E344C80004D1F21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4293D211E344C80004D1F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4293D231E344C80004D1F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4293D261E344C80004D1F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,9 +55,12 @@
 		D4293D3E1E344C81004D1F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4293D4E1E34D26E004D1F21 /* CustomTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
 		D4293D501E34D277004D1F21 /* CustomTabbarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabbarItem.swift; sourceTree = "<group>"; };
-		D499555E1E34EBF500B9501A /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = resouce/add.png; sourceTree = "<group>"; };
 		D49955601E34F1E200B9501A /* add_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_circle.png; path = resouce/add_circle.png; sourceTree = "<group>"; };
 		D49955621E34F2AB00B9501A /* add_circle_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_circle_selected.png; path = resouce/add_circle_selected.png; sourceTree = "<group>"; };
+		D49955641E34FDDE00B9501A /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list.png; path = resouce/list.png; sourceTree = "<group>"; };
+		D49955651E34FDDE00B9501A /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = resouce/map.png; sourceTree = "<group>"; };
+		D4C6C7F41E351C870033800E /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D4C6C7F61E351C910033800E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,12 +114,14 @@
 				D4293D4E1E34D26E004D1F21 /* CustomTabbarController.swift */,
 				D4293D501E34D277004D1F21 /* CustomTabbarItem.swift */,
 				D4293D1C1E344C80004D1F21 /* AppDelegate.swift */,
-				D4293D1E1E344C80004D1F21 /* ViewController.swift */,
+				D4C6C7F41E351C870033800E /* ListViewController.swift */,
+				D4C6C7F61E351C910033800E /* MapViewController.swift */,
 				D4293D201E344C80004D1F21 /* Main.storyboard */,
 				D4293D231E344C80004D1F21 /* Assets.xcassets */,
 				D4293D251E344C80004D1F21 /* LaunchScreen.storyboard */,
 				D4293D281E344C80004D1F21 /* Info.plist */,
-				D499555E1E34EBF500B9501A /* add.png */,
+				D49955641E34FDDE00B9501A /* list.png */,
+				D49955651E34FDDE00B9501A /* map.png */,
 				D49955601E34F1E200B9501A /* add_circle.png */,
 				D49955621E34F2AB00B9501A /* add_circle_selected.png */,
 			);
@@ -254,8 +260,9 @@
 				D4293D241E344C80004D1F21 /* Assets.xcassets in Resources */,
 				D49955631E34F2AB00B9501A /* add_circle_selected.png in Resources */,
 				D4293D221E344C80004D1F21 /* Main.storyboard in Resources */,
+				D49955671E34FDDE00B9501A /* map.png in Resources */,
 				D49955611E34F1E200B9501A /* add_circle.png in Resources */,
-				D499555F1E34EBF500B9501A /* add.png in Resources */,
+				D49955661E34FDDE00B9501A /* list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +288,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4293D4F1E34D26E004D1F21 /* CustomTabbarController.swift in Sources */,
+				D4C6C7F71E351C920033800E /* MapViewController.swift in Sources */,
 				D4293D511E34D277004D1F21 /* CustomTabbarItem.swift in Sources */,
-				D4293D1F1E344C80004D1F21 /* ViewController.swift in Sources */,
+				D4C6C7F51E351C870033800E /* ListViewController.swift in Sources */,
 				D4293D1D1E344C80004D1F21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
