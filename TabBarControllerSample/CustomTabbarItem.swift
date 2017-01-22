@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
-class CustomTabarItem: UIButton {
-    
+class CustomTabarItem: UITabBarItem {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+//        self.image
+        
+    }
 }
