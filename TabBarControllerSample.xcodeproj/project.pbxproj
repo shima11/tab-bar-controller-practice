@@ -21,6 +21,9 @@
 		D49955671E34FDDE00B9501A /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = D49955651E34FDDE00B9501A /* map.png */; };
 		D49B5DF61E35B6E400E4546D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B5DF51E35B6E400E4546D /* CustomTabBar.swift */; };
 		D49B5DF81E35B72400E4546D /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B5DF71E35B72400E4546D /* UIImage+Color.swift */; };
+		D49B5DFD1E35C14700E4546D /* CardStackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B5DFB1E35C14700E4546D /* CardStackController.swift */; };
+		D49B5DFE1E35C14700E4546D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B5DFC1E35C14700E4546D /* Helpers.swift */; };
+		D49B5E021E35C2B500E4546D /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B5E011E35C2B500E4546D /* CardViewController.swift */; };
 		D4C6C7F51E351C870033800E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6C7F41E351C870033800E /* ListViewController.swift */; };
 		D4C6C7F71E351C920033800E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6C7F61E351C910033800E /* MapViewController.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +66,9 @@
 		D49955651E34FDDE00B9501A /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = resouce/map.png; sourceTree = "<group>"; };
 		D49B5DF51E35B6E400E4546D /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		D49B5DF71E35B72400E4546D /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		D49B5DFB1E35C14700E4546D /* CardStackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardStackController.swift; path = Library/CardStackController/CardStackController.swift; sourceTree = "<group>"; };
+		D49B5DFC1E35C14700E4546D /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Library/CardStackController/Helpers.swift; sourceTree = "<group>"; };
+		D49B5E011E35C2B500E4546D /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		D4C6C7F41E351C870033800E /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D4C6C7F61E351C910033800E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,13 +121,11 @@
 		D4293D1B1E344C80004D1F21 /* TabBarControllerSample */ = {
 			isa = PBXGroup;
 			children = (
-				D4293D4E1E34D26E004D1F21 /* CustomTabbarController.swift */,
+				D49B5DF91E35C12900E4546D /* Library */,
 				D49B5DF71E35B72400E4546D /* UIImage+Color.swift */,
-				D49B5DF51E35B6E400E4546D /* CustomTabBar.swift */,
-				D4293D501E34D277004D1F21 /* CustomTabbarItem.swift */,
 				D4293D1C1E344C80004D1F21 /* AppDelegate.swift */,
-				D4C6C7F41E351C870033800E /* ListViewController.swift */,
-				D4C6C7F61E351C910033800E /* MapViewController.swift */,
+				D49B5DFF1E35C26500E4546D /* TabBarController */,
+				D49B5E001E35C27D00E4546D /* ViewController */,
 				D4293D201E344C80004D1F21 /* Main.storyboard */,
 				D4293D231E344C80004D1F21 /* Assets.xcassets */,
 				D4293D251E344C80004D1F21 /* LaunchScreen.storyboard */,
@@ -150,6 +154,43 @@
 				D4293D3E1E344C81004D1F21 /* Info.plist */,
 			);
 			path = TabBarControllerSampleUITests;
+			sourceTree = "<group>";
+		};
+		D49B5DF91E35C12900E4546D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D49B5DFA1E35C13200E4546D /* CardStackController */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		D49B5DFA1E35C13200E4546D /* CardStackController */ = {
+			isa = PBXGroup;
+			children = (
+				D49B5DFB1E35C14700E4546D /* CardStackController.swift */,
+				D49B5DFC1E35C14700E4546D /* Helpers.swift */,
+			);
+			name = CardStackController;
+			sourceTree = "<group>";
+		};
+		D49B5DFF1E35C26500E4546D /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D4293D4E1E34D26E004D1F21 /* CustomTabbarController.swift */,
+				D49B5DF51E35B6E400E4546D /* CustomTabBar.swift */,
+				D4293D501E34D277004D1F21 /* CustomTabbarItem.swift */,
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		D49B5E001E35C27D00E4546D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6C7F41E351C870033800E /* ListViewController.swift */,
+				D4C6C7F61E351C910033800E /* MapViewController.swift */,
+				D49B5E011E35C2B500E4546D /* CardViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,12 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49B5DFD1E35C14700E4546D /* CardStackController.swift in Sources */,
 				D4293D4F1E34D26E004D1F21 /* CustomTabbarController.swift in Sources */,
 				D4C6C7F71E351C920033800E /* MapViewController.swift in Sources */,
 				D4293D511E34D277004D1F21 /* CustomTabbarItem.swift in Sources */,
+				D49B5DFE1E35C14700E4546D /* Helpers.swift in Sources */,
 				D4C6C7F51E351C870033800E /* ListViewController.swift in Sources */,
 				D49B5DF61E35B6E400E4546D /* CustomTabBar.swift in Sources */,
 				D49B5DF81E35B72400E4546D /* UIImage+Color.swift in Sources */,
+				D49B5E021E35C2B500E4546D /* CardViewController.swift in Sources */,
 				D4293D1D1E344C80004D1F21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

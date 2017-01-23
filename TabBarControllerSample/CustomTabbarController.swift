@@ -11,7 +11,28 @@ import UIKit
 
 class CustomTabbarController: UITabBarController {
     
-    let addButton: UIButton = UIButton(type: .custom)
+    let addButton: UIButton = {
+        let button = UIButton(type: .custom)
+        let screen = UIScreen.main.bounds.size
+        let buttonSize: CGFloat = 58
+        let buttomMargin: CGFloat = 8
+        button.frame = CGRect(x: screen.width/2 - buttonSize/2, y: screen.height - buttonSize - buttomMargin, width: buttonSize, height: buttonSize)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = button.frame.width / 2
+        button.layer.borderWidth = 4
+        button.layer.borderColor = UIColor.white.cgColor
+        button.clipsToBounds = true
+        return button
+    }()
+    
+    let cardStackController: CardStackController = {
+        let cardStackController = CardStackController()
+        cardStackController.cardScaleFactor = 0.95
+        cardStackController.firstCardTopOffset = 20
+        cardStackController.topOffsetBetweenCards = 20
+        cardStackController.verticalTranslation = -20
+        return cardStackController
+    }()
     
     var firstItemImageView: UIImageView!
     var secondItemImageView: UIImageView!
@@ -52,13 +73,6 @@ class CustomTabbarController: UITabBarController {
     }
     
     private func setButton() {
-        addButton.frame = CGRect(x:view.frame.size.width/2 - 29, y: view.frame.size.height - 67, width: 58, height: 58)
-        addButton.backgroundColor = .white
-        addButton.layer.cornerRadius = addButton.frame.width / 2
-        addButton.layer.borderWidth = 4
-        addButton.layer.borderColor = UIColor.white.cgColor
-        addButton.clipsToBounds = true
-        
         let image = UIImage(named: "add_circle")?.imageWithColor(tintColor: .darkGray).withRenderingMode(.alwaysOriginal)
         let selectedImage = UIImage(named: "add_circle_selected")?.imageWithColor(tintColor: .darkGray).withRenderingMode(.alwaysOriginal)
         addButton.setImage(image, for: UIControlState())
@@ -68,8 +82,13 @@ class CustomTabbarController: UITabBarController {
     }
     
     @objc private func addButtonTapped(_ sender: UITapGestureRecognizer) {
-        print("addbutton tapped")
-        
+
+        cardStackController.delegate = self
+        present(cardStackController, animated: false, completion: nil)
+
+        let cardViewController = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "CardViewController") as! CardViewController
+        cardViewController.delegate = self
+        cardStackController.stack(viewController: cardViewController)
     }
 }
 
@@ -97,5 +116,15 @@ extension CustomTabbarController: UITabBarControllerDelegate {
                 self.secondItemImageView.transform = rotation
             }, completion: nil)
         }
+    }
+}
+
+extension CustomTabbarController: CardStackControllerDelegate {
+}
+
+extension CustomTabbarController: CardViewControllerDelegate {
+    
+    func dismiss() {
+        cardStackController.unstackLastViewController()
     }
 }

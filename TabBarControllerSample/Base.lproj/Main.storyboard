@@ -8,6 +8,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="6Nw-k1-0Qm">
+            <objects>
+                <viewController storyboardIdentifier="CardViewController" id="I7p-Xh-etw" customClass="CardViewController" customModule="TabBarControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wrt-ro-qEX"/>
+                        <viewControllerLayoutGuide type="bottom" id="BOZ-WR-wiy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jj4-0N-Bap">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QS-kB-8fo">
+                                <rect key="frame" x="110" y="323" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m99-8C-oCH">
+                                <rect key="frame" x="324" y="28" width="43" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="close"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="I7p-Xh-etw" eventType="touchUpInside" id="r04-tM-56i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3QS-kB-8fo" firstAttribute="centerY" secondItem="jj4-0N-Bap" secondAttribute="centerY" id="F0o-v5-1Kc"/>
+                            <constraint firstItem="3QS-kB-8fo" firstAttribute="centerX" secondItem="jj4-0N-Bap" secondAttribute="centerX" id="VsB-GM-HbP"/>
+                            <constraint firstAttribute="trailing" secondItem="m99-8C-oCH" secondAttribute="trailing" constant="8" id="WcB-py-Glg"/>
+                            <constraint firstItem="m99-8C-oCH" firstAttribute="top" secondItem="Wrt-ro-qEX" secondAttribute="bottom" constant="8" id="nkK-Fi-uPb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JnJ-n0-qld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772" y="330.58470764617692"/>
+        </scene>
         <!--Map-->
         <scene sceneID="AcI-73-2cB">
             <objects>
