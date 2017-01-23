@@ -83,12 +83,33 @@ class CustomTabbarController: UITabBarController {
     
     @objc private func addButtonTapped(_ sender: UITapGestureRecognizer) {
 
-        cardStackController.delegate = self
-        present(cardStackController, animated: false, completion: nil)
+        let animation = CAKeyframeAnimation()
+        animation.delegate = self
+        animation.keyPath = "transform.scale"
+        animation.duration = 0.2
+        animation.values = [NSNumber(value:0.8),
+                            NSNumber(value:0.9)]
+        animation.timingFunctions = [ CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut),
+                                      CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)]
+        animation.isRemovedOnCompletion = true
+        addButton.layer.add(animation, forKey: "bounce_addButton")
+    }
+}
 
-        let cardViewController = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "CardViewController") as! CardViewController
-        cardViewController.delegate = self
-        cardStackController.stack(viewController: cardViewController)
+// add button animation delegate
+
+extension CustomTabbarController: CAAnimationDelegate {
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+      
+//        if anim == addButton.layer.animation(forKey: "bounce_addButton") {
+            cardStackController.delegate = self
+            present(cardStackController, animated: false, completion: nil)
+            
+            let cardViewController = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(withIdentifier: "CardViewController") as! CardViewController
+            cardViewController.delegate = self
+            cardStackController.stack(viewController: cardViewController)
+//        }
     }
 }
 
